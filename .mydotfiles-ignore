@@ -1,0 +1,5 @@
+# Ignore everything by default
+*
+
+# Whitelist for files and folders we want to version
+!.mydotfiles-ignore
