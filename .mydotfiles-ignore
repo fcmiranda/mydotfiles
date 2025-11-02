@@ -4,5 +4,14 @@
 # Whitelist for files and folders we want to version
 !.mydotfiles-ignore
 !.config/hypr
+!.config/hypr/*
 !scripts/
 !scripts/*
+
+# Locale and keyboard configuration files
+!.profile
+!.bashrc
+!.zshrc
+
+# Exclude backup directories created by locale setup script
+.locale_backup_*/
