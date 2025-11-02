@@ -62,6 +62,10 @@ if [ -f /etc/default/locale ]; then
     sudo cp /etc/default/locale "$BACKUP_DIR/default_locale.bak"
 fi
 
+if [ -f /etc/locale.conf ]; then
+    sudo cp /etc/locale.conf "$BACKUP_DIR/locale.conf.bak"
+fi
+
 # Backup keyboard settings
 if [ -f /etc/default/keyboard ]; then
     sudo cp /etc/default/keyboard "$BACKUP_DIR/keyboard.bak"
@@ -87,8 +91,17 @@ sudo locale-gen
 
 # Set system locale
 print_status "Setting system locale..."
-echo "LANG=$LOCALE" | sudo tee /etc/default/locale >/dev/null
-echo "LC_ALL=$LOCALE" | sudo tee -a /etc/default/locale >/dev/null
+sudo tee /etc/default/locale >/dev/null <<EOF
+LANG=$LOCALE
+LC_ALL=$LOCALE
+EOF
+
+# Update locale.conf for systemd-based environments
+print_status "Updating /etc/locale.conf..."
+sudo tee /etc/locale.conf >/dev/null <<EOF
+LANG=$LOCALE
+LC_ALL=$LOCALE
+EOF
 
 # -- Configure keyboard layout --
 print_status "Configuring keyboard layout to US International..."
@@ -267,6 +280,7 @@ print_success "🎉 Setup Complete! 🎉"
 echo
 print_status "Changes applied:"
 echo "  • Locale: $LOCALE"
+echo "  • System locale files: /etc/default/locale, /etc/locale.conf"
 echo "  • Keyboard Layout: $KEYBOARD_LAYOUT ($KEYBOARD_VARIANT)"
 echo "  • Backup created: $BACKUP_DIR"
 echo
@@ -286,6 +300,7 @@ fi
 echo
 print_status "To verify the changes:"
 echo "  • Check locale: locale"
+echo "  • Inspect locale.conf: cat /etc/locale.conf"
 echo "  • Check keyboard: setxkbmap -query"
 echo "  • Test cedilla: Right Alt + , then c should produce ç"
 echo
