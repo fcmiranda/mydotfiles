@@ -1,0 +1,34 @@
+# Kanshi monitor configuration
+# See https://github.com/emersion/kanshi for more details
+
+# Profile for HDMI-A-1 monitor (external display)
+profile "hdmi-external" {
+    output "HDMI-A-1" mode 1920x1080@60Hz position 0,0 scale 1.0
+}
+
+# Profile for built-in display (laptop)
+profile "internal-only" {
+    output "eDP-1" mode 1920x1080@60Hz position 0,0 scale 1.0
+}
+
+# Dual monitor setup - HDMI primary, internal secondary
+profile "dual-hdmi-primary" {
+    output "HDMI-A-1" mode 1920x1080@60Hz position 0,0 scale 1.0
+    output "eDP-1" mode 1920x1080@60Hz position 1920,0 scale 1.0
+}
+
+# Dual monitor setup - internal primary, HDMI secondary
+profile "dual-internal-primary" {
+    output "eDP-1" mode 1920x1080@60Hz position 0,0 scale 1.0
+    output "HDMI-A-1" mode 1920x1080@60Hz position 1920,0 scale 1.0
+}
+
+# High-DPI profile for retina displays (adjust as needed)
+profile "retina-hdmi" {
+    output "HDMI-A-1" mode 2560x1440@60Hz position 0,0 scale 1.0
+}
+
+# Profile matching your current monitors.conf setup
+profile "current-setup" {
+    output "HDMI-A-1" enable scale 1.0
+}
