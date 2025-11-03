@@ -16,3 +16,6 @@ alias codemydotfiles='GIT_DIR=/home/fecavmi/mydotfiles GIT_WORK_TREE=/home/fecav
 # Locale settings (added by setup_us_intl_locale.sh)
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# Waybar reload alias
+alias waybar-reload='pkill -SIGUSR1 waybar'
