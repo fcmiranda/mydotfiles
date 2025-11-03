@@ -3,10 +3,18 @@
 
 # Whitelist for files and folders we want to version
 !.mydotfiles-ignore
+
 !.config/hypr
 !.config/hypr/*
+
 !.config/waybar
 !.config/waybar/*
+
+!.config/instructions
+!.config/instructions/*
+
+!.config/kanshi
+!.config/kanshi/*
 
 !scripts/
 !scripts/*
@@ -14,6 +22,7 @@
 # Locale and keyboard configuration files
 !.profile
 !.bashrc
+!.zshrc
 !.zshrc
 
 # Exclude backup directories created by locale setup script
