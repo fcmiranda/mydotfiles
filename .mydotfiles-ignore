@@ -10,8 +10,8 @@
 !.config/waybar
 !.config/waybar/*
 
-!.config/instructions
-!.config/instructions/*
+!instructions/
+!instructions/*
 
 !.config/kanshi
 !.config/kanshi/*
