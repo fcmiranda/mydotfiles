@@ -23,7 +23,6 @@
 !.profile
 !.bashrc
 !.zshrc
-!.zshrc
 
 # Exclude backup directories created by locale setup script
 .locale_backup_*/
