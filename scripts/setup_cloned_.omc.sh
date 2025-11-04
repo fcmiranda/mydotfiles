@@ -15,9 +15,9 @@
 
 # -- Configuration Variables --
 # The directory where you cloned your bare repository.
-DOTFILES_DIR="$HOME/mydotfiles"
+DOTFILES_DIR="$HOME/.omc"
 # The remote repository containing your dotfiles.
-DOTFILES_REPO="https://github.com/fcmiranda/mydotfiles.git"
+DOTFILES_REPO="https://github.com/fcmiranda/.omc.git"
 # Git binary to use for all operations.
 GIT_BIN="/usr/bin/git"
 # Your shell's configuration file. Change to ~/.zshrc if you use Zsh.
@@ -41,7 +41,7 @@ fi
 # The 'config' alias simplifies all future commands
 echo "--- Step 0: Configuring the 'config' alias in your ~/.bashrc ---"
 ALIAS_CMD="alias config='$GIT_BIN --git-dir=$DOTFILES_DIR --work-tree=$HOME'"
-ALIAS_CODE="alias codemydotfiles='GIT_DIR=$DOTFILES_DIR GIT_WORK_TREE=$HOME code $HOME'"
+ALIAS_CODE="alias code-omc='GIT_DIR=$DOTFILES_DIR GIT_WORK_TREE=$HOME code $HOME'"
 SHELL_CONFIG="$HOME/.bashrc" # Change to ~/.zshrc if you use Zsh
 
 if ! grep -qF "$ALIAS_CMD" "$SHELL_CONFIG"; then
@@ -55,9 +55,9 @@ fi
 if ! grep -qF "$ALIAS_CODE" "$SHELL_CONFIG"; then
     echo "" >> "$SHELL_CONFIG"
     echo "$ALIAS_CODE" >> "$SHELL_CONFIG"
-    echo "✅ Alias 'codemydotfiles' added to '$SHELL_CONFIG'."
+    echo "✅ Alias 'code.omc' added to '$SHELL_CONFIG'."
 else
-    echo "ℹ️ The alias 'codemydotfiles' already exists in your '$SHELL_CONFIG'."
+    echo "ℹ️ The alias 'code.omc' already exists in your '$SHELL_CONFIG'."
 fi
 echo
 
@@ -80,7 +80,7 @@ echo "--- Applying local repository configuration ---"
 # Don't show all untracked files in `config status`.
 $DOTFILES_GIT config --local status.showUntrackedFiles no
 # Set the custom ignore file (assuming its name based on previous examples).
-$DOTFILES_GIT config --local core.excludesFile "$HOME/.mydotfiles-ignore"
+$DOTFILES_GIT config --local core.excludesFile "$HOME/.omcignore"
 echo "✅ Local Git configuration has been set."
 echo
 
