@@ -6,8 +6,8 @@
 
 # -- Configuration Variables --
 # Defines the location of the bare repository and the ignore file name
-DOTFILES_DIR="$HOME/.mydotfiles"
-IGNORE_FILE="$HOME/.mydotfiles-ignore"
+DOTFILES_DIR="$HOME/.omc"
+IGNORE_FILE="$HOME/.omc-ignore"
 
 # -- Initial Verification --
 # Ensures the script doesn't overwrite an existing configuration
@@ -25,7 +25,7 @@ echo
 # The 'config' alias simplifies all future commands
 echo "--- Step 2: Configuring the 'config' alias in your ~/.bashrc ---"
 ALIAS_CMD="alias config='/usr/bin/git --git-dir=$DOTFILES_DIR --work-tree=$HOME'"
-ALIAS_CODE="alias codemydotfiles='GIT_DIR=\$HOME/.mydotfiles GIT_WORK_TREE=\$HOME code \$HOME'"
+ALIAS_CODE="alias codeomc='GIT_DIR=\$HOME/.omc GIT_WORK_TREE=\$HOME code \$HOME'"
 SHELL_CONFIG="$HOME/.bashrc" # Change to ~/.zshrc if you use Zsh
 
 if ! grep -qF "$ALIAS_CMD" "$SHELL_CONFIG"; then
@@ -39,9 +39,9 @@ fi
 if ! grep -qF "$ALIAS_CODE" "$SHELL_CONFIG"; then
     echo "" >> "$SHELL_CONFIG"
     echo "$ALIAS_CODE" >> "$SHELL_CONFIG"
-    echo "✅ Alias 'codemydotfiles' added to '$SHELL_CONFIG'."
+    echo "✅ Alias 'code.omc' added to '$SHELL_CONFIG'."
 else
-    echo "ℹ️ The alias 'codemydotfiles' already exists in your '$SHELL_CONFIG'."
+    echo "ℹ️ The alias 'code.omc' already exists in your '$SHELL_CONFIG'."
 fi
 echo
 
@@ -56,7 +56,7 @@ cat <<EOF > "$IGNORE_FILE"
 *
 
 # Whitelist for files and folders we want to version
-!.mydotfiles-ignore
+!.omcignore
 EOF
 echo "✅ File '$IGNORE_FILE' created with the specified content."
 echo
@@ -89,7 +89,7 @@ if [ -d "$HOME/.config/hypr" ]; then
 *
 
 # Whitelist for files and folders we want to version
-!.mydotfiles-ignore
+!.omcignore
 !.config/hypr
 EOF
     
