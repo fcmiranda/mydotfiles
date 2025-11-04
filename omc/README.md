@@ -12,8 +12,17 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fcmiranda/.omc/refs/heads/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/fcmiranda/.omc/refs/heads/main/omc/sh/omc.sh)"
 ```
 
+
+
 ## Install US International locale
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fcmiranda/.omc/refs/heads/main/omc/sh/us-intl-locale.sh)"
+cd && ./omc/sh/us-intl-locale.sh
+```
+
+## Install packages (kanshi, atuin)
+
+```sh
+chmod +x /home/fecavmi/omc/pkgs/install.zsh
+cd && ./omc/pkgs/install.zsh
 ```
