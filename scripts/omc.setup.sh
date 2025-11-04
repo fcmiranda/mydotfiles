@@ -78,9 +78,9 @@ fi
 # --- Step 2: Configure local repository settings ---
 echo "--- Applying local repository configuration ---"
 # Don't show all untracked files in `omc status`.
-$DOTFILES_GIT omc --local status.showUntrackedFiles no
+$DOTFILES_GIT config --local status.showUntrackedFiles no
 # Set the custom ignore file (assuming its name based on previous examples).
-$DOTFILES_GIT omc --local core.excludesFile "$HOME/.omcignore"
+$DOTFILES_GIT config --local core.excludesFile "$HOME/.omcignore"
 echo "✅ Local Git configuration has been set."
 echo
 
