@@ -7,6 +7,9 @@
 !omc/
 !omc/**/*
 
+!.zsh/
+!.zsh/**/*
+
 !.config/hypr
 !.config/hypr/*
 
