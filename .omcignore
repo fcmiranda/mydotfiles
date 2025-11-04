@@ -10,14 +10,11 @@
 !.config/waybar
 !.config/waybar/*
 
-!instructions/
-!instructions/*
-
 !.config/kanshi
 !.config/kanshi/*
 
-!scripts/
-!scripts/*
+!.omc/
+!.omc/*
 
 # Locale and keyboard configuration files
 !.profile
