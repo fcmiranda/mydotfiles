@@ -1,9 +1,12 @@
 ZSH_MODULE_DIR="${ZSH_MODULE_DIR:-${HOME}/.zsh/modules}"
 
-if [[ -d "${ZSH_MODULE_DIR}" ]]; then
-  for module in "${ZSH_MODULE_DIR}"/*.sh; do
-    [[ -e "${module}" ]] || continue
-    # shellcheck source=/dev/null
-    source "${module}"
-  done
-fi
+# shellcheck source=/dev/null
+source "${ZSH_MODULE_DIR}/mise.zsh"
+# shellcheck source=/dev/null
+source "${ZSH_MODULE_DIR}/starship.zsh"
+# shellcheck source=/dev/null
+source "${ZSH_MODULE_DIR}/zoxide.zsh"
+# shellcheck source=/dev/null
+source "${ZSH_MODULE_DIR}/fzf.zsh"
+# shellcheck source=/dev/null
+source "${ZSH_MODULE_DIR}/atuin.zsh"
