@@ -2,7 +2,7 @@
 *
 
 # Whitelist for files and folders we want to version
-!.mydotfiles-ignore
+!.omcignore
 
 !.config/hypr
 !.config/hypr/*
