@@ -12,6 +12,12 @@ if ! command -v atuin >/dev/null 2>&1; then
         curl --proto '=https' --tlsv1.2 -sSf https://install.atuin.sh | sh
     fi
     echo "Atuin installed."
+    if command -v atuin >/dev/null 2>&1; then
+        echo "Logging into Atuin..."
+        atuin login
+    else
+        echo "Atuin command not found after installation; skipping login."
+    fi
 else
     echo "Atuin is already installed."
 fi
