@@ -16,8 +16,7 @@
 !.config/waybar
 !.config/waybar/*
 
-!.config/kanshi
-!.config/kanshi/*
+!.config/kanshi/config.example
 
 # Locale and keyboard configuration files
 !.profile
