@@ -4,6 +4,9 @@
 # Whitelist for files and folders we want to version
 !.omcignore
 
+!omc/
+!omc/**/*
+
 !.config/hypr
 !.config/hypr/*
 
@@ -12,9 +15,6 @@
 
 !.config/kanshi
 !.config/kanshi/*
-
-!.omc/
-!.omc/*
 
 # Locale and keyboard configuration files
 !.profile

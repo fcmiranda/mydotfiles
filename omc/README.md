@@ -1,0 +1,1 @@
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fcmiranda/.omc/refs/heads/main/scripts/omc.setup.sh)"
