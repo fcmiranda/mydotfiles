@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # ==============================================================================
 # Script to initialize a Git Bare repository for dotfiles management
@@ -23,17 +23,17 @@ echo
 
 # -- Alias Configuration --
 # The 'config' alias simplifies all future commands
-echo "--- Step 2: Configuring the 'config' alias in your ~/.bashrc ---"
-ALIAS_CMD="alias config='/usr/bin/git --git-dir=$DOTFILES_DIR --work-tree=$HOME'"
-ALIAS_CODE="alias codeomc='GIT_DIR=\$HOME/.omc GIT_WORK_TREE=\$HOME code \$HOME'"
-SHELL_CONFIG="$HOME/.bashrc" # Change to ~/.zshrc if you use Zsh
+echo "--- Step 2: Configuring the 'config' alias in your ~/.zshrc ---"
+ALIAS_CMD="alias omc='/usr/bin/git --git-dir=$DOTFILES_DIR --work-tree=$HOME'"
+ALIAS_CODE="alias code.omc='GIT_DIR=\$HOME/.omc GIT_WORK_TREE=\$HOME code \$HOME'"
+SHELL_CONFIG="$HOME/.zshrc"
 
 if ! grep -qF "$ALIAS_CMD" "$SHELL_CONFIG"; then
     echo "" >> "$SHELL_CONFIG"
     echo "$ALIAS_CMD" >> "$SHELL_CONFIG"
-    echo "✅ Alias 'config' added to '$SHELL_CONFIG'."
+    echo "✅ Alias 'omc' added to '$SHELL_CONFIG'."
 else
-    echo "ℹ️ The alias 'config' already exists in your '$SHELL_CONFIG'."
+    echo "ℹ️ The alias 'omc' already exists in your '$SHELL_CONFIG'."
 fi
 
 if ! grep -qF "$ALIAS_CODE" "$SHELL_CONFIG"; then
@@ -63,9 +63,9 @@ echo
 
 # -- Repository Configuration --
 echo "--- Step 4: Configuring the repository to use the ignore file ---"
-/usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" config --local core.excludesFile "$IGNORE_FILE"
+/usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" omc --local core.excludesFile "$IGNORE_FILE"
 # Extra configuration to not show all untracked files in status
-/usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" omc --local status.showUntrackedFiles no
 echo "✅ Repository configured to use the ignore file."
 echo
 
@@ -79,7 +79,7 @@ echo "--- Step 5: Performing the initial commit ---"
 echo "✅ Initial commit performed successfully!"
 echo
 
-# -- Second Commit (Hyprland Config) --
+# -- Second Commit (Hyprland omc) --
 echo "--- Step 5.1: Adding Hyprland configuration ---"
 # Adds the Hypr configuration folder, if it exists
 if [ -d "$HOME/.config/hypr" ]; then
@@ -130,7 +130,7 @@ else
     echo "⚠️ Failed to push to remote. You may need to:"
     echo "   1. Verify your GitHub credentials"
     echo "   2. Ensure the repository exists on GitHub"
-    echo "   3. Manually push later with: config push -u origin master"
+    echo "   3. Manually push later with: omc push -u origin master"
 fi
 echo
 
@@ -138,7 +138,7 @@ echo
 echo "=========================================================="
 echo "🎉 Configuration completed successfully! 🎉"
 echo
-echo "IMPORTANT: For the 'config' alias to work in your"
+echo "IMPORTANT: For the 'omc' alias to work in your"
 echo "terminal, you need to restart your terminal or run:"
 echo
 echo "    source $SHELL_CONFIG"
