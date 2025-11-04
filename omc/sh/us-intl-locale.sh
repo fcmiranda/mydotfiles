@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # ==============================================================================
 # Script to configure US International keyboard layout and locale settings
@@ -18,19 +18,19 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
+    printf '%b\n' "${BLUE}[INFO]${NC} $1"
 }
 
 print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
+    printf '%b\n' "${GREEN}[SUCCESS]${NC} $1"
 }
 
 print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
+    printf '%b\n' "${YELLOW}[WARNING]${NC} $1"
 }
 
 print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    printf '%b\n' "${RED}[ERROR]${NC} $1"
 }
 
 # -- Pre-flight checks --
@@ -255,11 +255,8 @@ fi
 # -- Set user environment variables --
 print_status "Setting user environment variables..."
 
-# Update user's .profile or .bashrc
-PROFILE_FILE="$HOME/.profile"
-if [ -f "$HOME/.bashrc" ]; then
-    PROFILE_FILE="$HOME/.bashrc"
-fi
+# Update user's .p.zshrc file
+PROFILE_FILE="$HOME/.zshrc"
 
 # Remove any existing locale exports to avoid duplicates
 sed -i '/^export LANG=/d' "$PROFILE_FILE" 2>/dev/null || true
@@ -267,7 +264,7 @@ sed -i '/^export LC_ALL=/d' "$PROFILE_FILE" 2>/dev/null || true
 
 # Add new locale exports
 echo "" >> "$PROFILE_FILE"
-echo "# Locale settings (added by setup_us_intl_locale.sh)" >> "$PROFILE_FILE"
+echo "# Locale settings (added by us-intl-locale.sh)" >> "$PROFILE_FILE"
 echo "export LANG=$LOCALE" >> "$PROFILE_FILE"
 echo "export LC_ALL=$LOCALE" >> "$PROFILE_FILE"
 

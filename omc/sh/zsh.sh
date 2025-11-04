@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-set -euo pipefail
-
 log() {
 	printf '[setup:zsh] %s\n' "$*"
 }
