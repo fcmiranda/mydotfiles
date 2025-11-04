@@ -1,1 +1,3 @@
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fcmiranda/.omc/refs/heads/main/scripts/omc.setup.sh)"
+
+install omc repo 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fcmiranda/.omc/refs/heads/main/omc/sh/install.sh)"
