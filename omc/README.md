@@ -23,6 +23,11 @@ cd && ./omc/sh/us-intl-locale.sh
 ## Install packages (kanshi, atuin)
 
 ```sh
-chmod +x /home/fecavmi/omc/pkgs/install.zsh
-cd && ./omc/pkgs/install.zsh
+chmod +x ~/omc/pkgs/install.zsh
+cd && ~/omc/pkgs/install.zsh
+```
+
+```sh
+chmod +x ~/omc/pkgs/zsh-plugins.zsh
+cd && ~/omc/pkgs/zsh-plugins.zsh
 ```
