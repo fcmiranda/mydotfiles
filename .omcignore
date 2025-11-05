@@ -13,6 +13,9 @@
 !.config/hypr
 !.config/hypr/*
 
+!.config/starship
+!.config/starship/**/*
+
 !.config/waybar
 !.config/waybar/*
 
