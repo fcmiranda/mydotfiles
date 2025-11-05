@@ -27,6 +27,7 @@ chmod +x ~/omc/pkgs/install.zsh
 cd && ~/omc/pkgs/install.zsh
 ```
 
+## Install zsh plugins
 ```sh
 chmod +x ~/omc/pkgs/zsh-plugins.zsh
 cd && ~/omc/pkgs/zsh-plugins.zsh
