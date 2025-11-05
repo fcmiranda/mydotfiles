@@ -27,6 +27,7 @@ This repository manages dotfiles using a bare Git repository approach. The core 
 
 ## Patterns to Follow
 - For new packages: Create `pkgs/<package>.zsh` with install check, package manager logic, and .zshrc additions
+- Every time you create a package install script, add it to `install.zsh` and add its `.zsh/modules` if applicable
 - For system installs: Add to `sh/<component>.sh` with distro detection
 - Always verify installations work on target systems before committing</content>
 <parameter name="filePath">/home/fecavmi/omc/.github/copilot-instructions.md

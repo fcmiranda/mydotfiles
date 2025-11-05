@@ -25,6 +25,9 @@
 !.config/waybar
 !.config/waybar/**
 
+!.config/walker
+!.config/walker/**
+
 !.config/kanshi/config.example
 
 # Locale and keyboard configuration files

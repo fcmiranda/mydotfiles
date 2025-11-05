@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Script to install packages: kanshi and atuin
+# Script to install packages: kanshi, atuin, and ghostty
 
 set -e
 
@@ -18,6 +18,13 @@ if [ -f "$(dirname "$0")/atuin.zsh" ]; then
     zsh "$(dirname "$0")/atuin.zsh"
 else
     echo "atuin.zsh not found, skipping atuin installation"
+fi
+
+# Install ghostty
+if [ -f "$(dirname "$0")/ghostty.zsh" ]; then
+    zsh "$(dirname "$0")/ghostty.zsh"
+else
+    echo "ghostty.zsh not found, skipping ghostty installation"
 fi
 
 echo "Packages installed."
