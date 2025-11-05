@@ -19,6 +19,9 @@
 !.config/hypr/
 !.config/hypr/**/*
 
+!.config/uwsm/
+!.config/uwsm/**/*
+
 !.config/waybar
 !.config/waybar/**
 
