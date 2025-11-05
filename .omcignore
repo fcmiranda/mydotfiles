@@ -10,20 +10,24 @@
 !.zsh/
 !.zsh/**/*
 
-!.config/hypr
-!.config/hypr/*
+!.config
+.config/*
 
 !.config/starship
-!.config/starship/**/*
+!.config/starship/**
+
+!.config/hypr/
+!.config/hypr/**/*
 
 !.config/waybar
-!.config/waybar/*
+!.config/waybar/**
 
 !.config/kanshi/config.example
 
 # Locale and keyboard configuration files
 !.profile
 !.bashrc
+!.bash_logout
 !.zshrc
 
 # Exclude backup directories created by locale setup script
