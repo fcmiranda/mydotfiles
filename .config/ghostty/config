@@ -22,6 +22,7 @@ shell-integration-features = no-cursor
 # Keyboard bindings
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
+keybind = ctrl+backspace=text:\x1b\x7f
 
 # SSH session terminfo
 shell-integration-features = ssh-env
