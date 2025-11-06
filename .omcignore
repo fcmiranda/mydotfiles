@@ -28,6 +28,9 @@
 !.config/walker
 !.config/walker/**
 
+!.config/ghostty
+!.config/ghostty/**
+
 !.config/kanshi/config.example
 
 # Locale and keyboard configuration files
