@@ -1,6 +1,6 @@
 
 # Source the Omarchy initialization script
-source ~/.zsh/omc.sh
+source ~/.zsh/omc.zsh
 
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
