@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Script to install packages: kanshi, atuin, and ghostty
+# Script to install packages: kanshi, atuin, ghostty, and keyd
 
 set -e
 
@@ -25,6 +25,13 @@ if [ -f "$(dirname "$0")/ghostty.zsh" ]; then
     zsh "$(dirname "$0")/ghostty.zsh"
 else
     echo "ghostty.zsh not found, skipping ghostty installation"
+fi
+
+# Install keyd
+if [ -f "$(dirname "$0")/keyd.zsh" ]; then
+    zsh "$(dirname "$0")/keyd.zsh"
+else
+    echo "keyd.zsh not found, skipping keyd installation"
 fi
 
 echo "Packages installed."
