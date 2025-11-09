@@ -13,6 +13,9 @@
 !.config
 .config/*
 
+!.config/fastfetch
+!.config/fastfetch/**
+
 !.config/starship
 !.config/starship/**
 
