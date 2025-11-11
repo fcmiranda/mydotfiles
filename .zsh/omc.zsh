@@ -6,7 +6,7 @@ ZSH_PLUGINS="${ZSH_PLUGINS:-${HOME}/.zsh/plugins}"
 fastfetch
 
 # shellcheck source=/dev/null
-source "${ZSH}/binds.zsh"
+[[ -f "${ZSH}/binds.zsh" ]] && `source "${ZSH}/binds.zsh"`
 # shellcheck source=/dev/null
 source "${ZSH_MODULE_DIR}/mise.zsh"
 # shellcheck source=/dev/null
