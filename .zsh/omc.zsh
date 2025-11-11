@@ -2,7 +2,8 @@ ZSH="${ZSH_PLUGINS:-${HOME}/.zsh}"
 ZSH_MODULE_DIR="${ZSH_MODULE_DIR:-${HOME}/.zsh/modules}"
 ZSH_PLUGINS="${ZSH_PLUGINS:-${HOME}/.zsh/plugins}"
 
-fastfetch --logo-type kitty-direct --logo ~/.config/fastfetch/control.png --logo-width 25 --logo-height 12
+# fastfetch --logo-type kitty-direct --logo ~/.config/fastfetch/control.png --logo-width 25 --logo-height 12
+fastfetch
 
 # shellcheck source=/dev/null
 source "${ZSH}/binds.zsh"
