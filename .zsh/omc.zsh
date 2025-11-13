@@ -3,7 +3,9 @@ ZSH_MODULE_DIR="${ZSH_MODULE_DIR:-${HOME}/.zsh/modules}"
 ZSH_PLUGINS="${ZSH_PLUGINS:-${HOME}/.zsh/plugins}"
 
 # fastfetch --logo-type kitty-direct --logo ~/.config/fastfetch/control.png --logo-width 25 --logo-height 12
-fastfetch
+ghosttime -t 1
+echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+clear
 
 # shellcheck source=/dev/null
 [[ -f "${ZSH}/binds.zsh" ]] && `source "${ZSH}/binds.zsh"`
