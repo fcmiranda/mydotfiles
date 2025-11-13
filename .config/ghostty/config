@@ -26,3 +26,7 @@ keybind = ctrl+backspace=text:\x1b\x7f
 
 # SSH session terminfo
 shell-integration-features = ssh-env
+
+# custom-shader = /home/fecavmi/.config/ghostty/shaders/cursor_blaze.glsl
+custom-shader = /home/fecavmi/.config/ghostty/shaders/cursor_frozen.glsl
+# custom-shader = /home/fecavmi/.config/ghostty/shaders/cursor_blaze.glsl
