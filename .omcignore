@@ -10,9 +10,6 @@
 !.zsh/
 !.zsh/**/*
 
-!.config
-.config/*
-
 !.config/fastfetch
 !.config/fastfetch/**
 
@@ -20,7 +17,7 @@
 !.config/starship/**
 
 !.config/hypr/
-!.config/hypr/**/*
+!.config/hypr/*
 
 !.config/uwsm/
 !.config/uwsm/**/*
@@ -35,6 +32,13 @@
 !.config/ghostty/**
 
 !.config/kanshi/config.example
+
+!.local/
+!.local/share/
+!.local/share/omarchy/
+!.local/share/omarchy/config/
+!.local/share/omarchy/config/walker/
+!.local/share/omarchy/config/walker/config.toml
 
 # Locale and keyboard configuration files
 !.profile
