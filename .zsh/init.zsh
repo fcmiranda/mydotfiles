@@ -25,7 +25,6 @@ source_if_exists() {
 	local shell_type="$1"
 	shift
 	local -a shell_names=("$@")
-	echo "Sourcing $shell_type: ${shell_names[*]}"
 
 	if [[ -z "$shell_type" ]] || (( ${#shell_names[@]} == 0 )); then
 		print -u2 "init.zsh: source_if_exists requires shell type and at least one name"

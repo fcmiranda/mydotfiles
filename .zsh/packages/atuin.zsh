@@ -1,8 +1,6 @@
-if command -v atuin &> /dev/null; then
-  export ATUIN_NOBIND=true
-  eval "$(atuin init zsh)"
-  bindkey "^R" atuin-search
-fi
+export ATUIN_NOBIND=true
+eval "$(atuin init zsh)"
+bindkey "^R" atuin-search
 
 # incremental history search with arrow keys
 bindkey "^[[A" history-beginning-search-backward
