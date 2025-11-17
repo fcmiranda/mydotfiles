@@ -9,8 +9,10 @@ printf '\n%.0s' {1..75}
 clear
 
 # Source Order: Utils → Packages → Plugins
-source_utils binds
-source_packages mise \
+source_utils \
+	binds
+source_packages \
+	mise \
 	starship \
 	zoxide \
 	fzf \
