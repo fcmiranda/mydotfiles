@@ -31,6 +31,11 @@
 !.config/ghostty
 !.config/ghostty/**
 
+!.local
+!.local/share
+!.local/share/waybar
+!.local/share/waybar/**
+
 !.config/kanshi/config.example
 
 # Locale and keyboard configuration files
