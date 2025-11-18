@@ -10,6 +10,7 @@
 !.zsh/
 !.zsh/**/*
 
+!.config/
 !.config/fastfetch
 !.config/fastfetch/**
 
@@ -22,8 +23,14 @@
 !.config/uwsm/
 !.config/uwsm/**/*
 
-!.config/waybar
+!.config/waybar/
 !.config/waybar/**
+!.config/waybar/includes/
+!.config/waybar/includes/**
+!.config/waybar/modules/
+!.config/waybar/modules/**
+!.config/waybar/styles/
+!.config/waybar/styles/**
 
 !.config/walker
 !.config/walker/**

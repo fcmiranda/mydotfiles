@@ -1,15 +1,33 @@
+
+/* Pill group styles */
+@import "styles/groups/pill.css";
+@import "styles/groups/pill-up.css";
+@import "styles/groups/pill-right.css";
+@import "styles/groups/pill-down.css";
+@import "styles/groups/pill-left.css";
+@import "styles/groups/pill-in.css";
+@import "styles/groups/pill-out.css";
+
 @import "../omarchy/current/theme/waybar.css";
+/* main colors set from theme above */
+@define-color main-bg @background;
+@define-color main-fg @foreground;
+
+/* map workspaces/taskbar accent/hover to theme colors so defaults.css can use them */
+@define-color wb-act-bg @main-fg;
+@define-color wb-act-fg @main-bg;
+@define-color wb-hvr-bg @main-fg;
+@define-color wb-hvr-fg @main-bg;
+@import "styles/defaults.css";
 
 * {
-  background-color: @background;
-  color: @foreground;
-
   border: none;
   border-radius: 0;
   min-height: 0;
   font-family: 'CaskaydiaMono Nerd Font';
   font-size: 12px;
 }
+
 
 .modules-left {
   margin-left: 8px;
