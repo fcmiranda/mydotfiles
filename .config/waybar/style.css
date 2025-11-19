@@ -1,101 +1,23 @@
-
-/* Pill group styles */
-@import "styles/groups/pill.css";
-@import "styles/groups/pill-up.css";
-@import "styles/groups/pill-right.css";
-@import "styles/groups/pill-down.css";
-@import "styles/groups/pill-left.css";
-@import "styles/groups/pill-in.css";
-@import "styles/groups/pill-out.css";
+/*
+ * Waybar master stylesheet
+ * Order: theme ➜ color aliases ➜ defaults ➜ module overrides.
+ */
 
 @import "../omarchy/current/theme/waybar.css";
-/* main colors set from theme above */
-@define-color main-bg @background;
-@define-color main-fg @foreground;
 
-/* map workspaces/taskbar accent/hover to theme colors so defaults.css can use them */
+/* Theme-derived color aliases consumed downstream */
+/* @define-color main-bg @background; */
+@define-color main-fg @foreground;
 @define-color wb-act-bg @main-fg;
 @define-color wb-act-fg @main-bg;
 @define-color wb-hvr-bg @main-fg;
 @define-color wb-hvr-fg @main-bg;
+@define-color wb-color @main-fg;
+@define-color wb-act-color @main-bg;
+@define-color wb-hvr-color @main-bg;
+
+/* Base component styling (imports the shared includes and group presets) */
 @import "styles/defaults.css";
 
-* {
-  border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: 'CaskaydiaMono Nerd Font';
-  font-size: 12px;
-}
-
-
-.modules-left {
-  margin-left: 8px;
-}
-
-.modules-right {
-  margin-right: 8px;
-}
-
-#workspaces button {
-  all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 9px;
-}
-
-#workspaces button.empty {
-  opacity: 0.5;
-}
-
-#cpu,
-#battery,
-#pulseaudio,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update {
-  min-width: 12px;
-  margin: 0 7.5px;
-}
-
-#tray {
-  margin-right: 16px;
-}
-
-#bluetooth {
-  margin-right: 17px;
-}
-
-#network {
-  margin-right: 13px;
-}
-
-#custom-expand-icon {
-  margin-right: 20px;
-}
-
-tooltip {
-  padding: 2px;
-}
-
-#custom-update {
-  font-size: 10px;
-}
-
-#clock {
-  margin-left: 8.75px;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-#custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 8.75px;
-  font-size: 10px;
-}
-
-#custom-screenrecording-indicator.active {
-  color: #a55555;
-}
+/* Fine-grained module tweaks */
+@import "modules/overrides.css";
