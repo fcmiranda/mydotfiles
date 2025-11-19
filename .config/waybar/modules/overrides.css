@@ -70,3 +70,15 @@
 tooltip {
     padding: 4px 8px;
 }
+
+/* Replace the Omarchy glyph with the white/black logotype */
+#custom-omarchy {
+    background-image: url("../omarchy-wb.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 6px;
+    color: transparent; /* hide fallback glyph */
+    min-width: 70px;
+    min-height: 18px;
+}
