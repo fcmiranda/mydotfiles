@@ -38,6 +38,9 @@
 !.config/ghostty
 !.config/ghostty/**
 
+!.config/mako
+!.config/mako/**
+
 !.local
 !.local/share
 !.local/share/waybar
